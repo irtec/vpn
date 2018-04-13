@@ -109,6 +109,7 @@ chmod +x info
 chmod +x about
 
 # finishing
+mkdir -p /home/irtech/public_html
 cd
 chown -R www-data:www-data /home/irtech/public_html
 service openvpn restart
