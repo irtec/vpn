@@ -54,6 +54,7 @@ chmod +x /etc/network/if-up.d/iptables
 service openvpn restart
 
 # konfigurasi openvpn
+mkdir -p /home/irtech/public_html
 cd /etc/openvpn/
 wget -O /etc/openvpn/client.ovpn "https://raw.githubusercontent.com/irtec/debian7/master/client-1194.conf"
 sed -i $MYIP2 /etc/openvpn/client.ovpn;
@@ -109,7 +110,6 @@ chmod +x info
 chmod +x about
 
 # finishing
-mkdir -p /home/irtech/public_html
 cd
 chown -R www-data:www-data /home/irtech/public_html
 service openvpn restart
@@ -149,7 +149,6 @@ echo "about (Informasi tentang script auto install)"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Fitur lain"  | tee -a log-install.txt
 echo "----------"  | tee -a log-install.txt
-echo "Webmin   : http://$MYIP:10000/"  | tee -a log-install.txt
 echo "Timezone : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
 echo "IPv6     : [off]"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
