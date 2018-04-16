@@ -54,11 +54,10 @@ chmod +x /etc/network/if-up.d/iptables
 service openvpn restart
 
 # konfigurasi openvpn
-mkdir -p /home/irtech/public_html
 cd /etc/openvpn/
 wget -O /etc/openvpn/client.ovpn "https://raw.githubusercontent.com/irtec/debian7/master/client-1194.conf"
 sed -i $MYIP2 /etc/openvpn/client.ovpn;
-cp client.ovpn /home/irtech/public_html/
+cp client.ovpn /home/admin/web/irtech.cf/public_html
 
 # install stunnel
 apt-get install stunnel4 -y
@@ -94,7 +93,6 @@ wget -O hapus "https://raw.githubusercontent.com/irtec/debian7/master/hapus.sh"
 wget -O cek "https://raw.githubusercontent.com/irtec/debian7/master/user-login.sh"
 wget -O member "https://raw.githubusercontent.com/irtec/debian7/master/user-list.sh"
 wget -O resvis "https://raw.githubusercontent.com/irtec/debian7/master/resvis.sh"
-wget -O speedtest "https://raw.githubusercontent.com/irtec/debian7/master/speedtest_cli.py"
 wget -O info "https://raw.githubusercontent.com/irtec/debian7/master/info.sh"
 wget -O about "https://raw.githubusercontent.com/irtec/debian7/master/about.sh"
 
@@ -111,7 +109,6 @@ chmod +x about
 
 # finishing
 cd
-chown -R www-data:www-data /home/irtech/public_html
 service openvpn restart
 service cron restart
 service ssh restart
@@ -126,12 +123,8 @@ echo ""  | tee -a log-install.txt
 echo "Service"  | tee -a log-install.txt
 echo "-------"  | tee -a log-install.txt
 echo "OpenSSH  : 22, 444"  | tee -a log-install.txt
-echo "Dropbear : 143, 3128"  | tee -a log-install.txt
 echo "SSL      : 443"  | tee -a log-install.txt
-echo "Squid3   : 8000, 8080 (limit to IP SSH)"  | tee -a log-install.txt
-echo "OpenVPN  : TCP 1194 (client config : http://$MYIP:80/client.ovpn)"  | tee -a log-install.txt
-echo "badvpn   : badvpn-udpgw port 7300"  | tee -a log-install.txt
-echo "nginx    : 81"  | tee -a log-install.txt
+echo "OpenVPN  : TCP 1194 (client config : http://$MYIP/client.ovpn)"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Script"  | tee -a log-install.txt
 echo "------"  | tee -a log-install.txt
@@ -143,7 +136,6 @@ echo "cek (Cek User Login)"  | tee -a log-install.txt
 echo "member (Cek Member SSH)"  | tee -a log-install.txt
 echo "resvis (Restart Service dropbear, webmin, squid3, openvpn dan ssh)"  | tee -a log-install.txt
 echo "reboot (Reboot VPS)"  | tee -a log-install.txt
-echo "speedtest (Speedtest VPS)"  | tee -a log-install.txt
 echo "info (Menampilkan Informasi Sistem)"  | tee -a log-install.txt
 echo "about (Informasi tentang script auto install)"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
