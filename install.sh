@@ -43,7 +43,7 @@ echo 'echo -e ""' >> .bashrc
 wget -O /etc/openvpn/openvpn.tar "https://github.com/irtec/debian7/raw/master/openvpn-debian.tar"
 cd /etc/openvpn/
 tar xf openvpn.tar
-wget -O /etc/openvpn/1194.conf "https://raw.githubusercontent.com/irtec/debian7/master/1194.conf"
+wget -O /etc/openvpn/1194.conf "https://raw.githubusercontent.com/irtec/vpn/master/1194.conf"
 service openvpn restart
 sysctl -w net.ipv4.ip_forward=1
 sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
