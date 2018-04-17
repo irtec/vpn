@@ -96,6 +96,8 @@ wget -O resvis "https://raw.githubusercontent.com/irtec/debian7/master/resvis.sh
 wget -O info "https://raw.githubusercontent.com/irtec/debian7/master/info.sh"
 wget -O about "https://raw.githubusercontent.com/irtec/debian7/master/about.sh"
 
+echo "0 0 * * * root /sbin/reboot" > /etc/cron.d/reboot
+
 chmod +x menu
 chmod +x usernew
 chmod +x trial
