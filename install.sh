@@ -87,8 +87,8 @@ gem install lolcat
 # download script
 cd /usr/bin
 wget -O menu "https://raw.githubusercontent.com/irtec/vpn/master/menu.sh"
-wget -O usernew "https://raw.githubusercontent.com/irtec/debian7/master/usernew.sh"
-wget -O trial "https://raw.githubusercontent.com/irtec/debian7/master/trial.sh"
+wget -O usernew "https://raw.githubusercontent.com/irtec/vpn/master/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/irtec/vpn/master/trial.sh"
 wget -O hapus "https://raw.githubusercontent.com/irtec/debian7/master/hapus.sh"
 wget -O cek "https://raw.githubusercontent.com/irtec/debian7/master/user-login.sh"
 wget -O member "https://raw.githubusercontent.com/irtec/debian7/master/user-list.sh"
