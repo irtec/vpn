@@ -105,7 +105,6 @@ chmod +x hapus
 chmod +x cek
 chmod +x member
 chmod +x resvis
-chmod +x speedtest
 chmod +x info
 chmod +x about
 
