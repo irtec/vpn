@@ -38,7 +38,7 @@ service ssh restart
 apt-get update
 
 # install essential package
-apt-get -y install nano openvpn
+apt-get -y install nano dnsutils openvpn screen whois ngrep unzip
 
 echo "clear" >> .bashrc
 echo 'echo -e "Selamat datang di server $HOSTNAME" | lolcat' >> .bashrc
