@@ -64,7 +64,7 @@ service openvpn restart
 cd /etc/openvpn/
 wget -O /etc/openvpn/client.ovpn "https://raw.githubusercontent.com/irtec/debian7/master/client-1194.conf"
 sed -i $MYIP2 /etc/openvpn/client.ovpn;
-cp client.ovpn /home/admin/web/irtech.cf/public_html
+cp client.ovpn /home/admin/web/induk/public_html
 
 # install badvpn
 cd
@@ -150,6 +150,7 @@ cd
 service openvpn restart
 service cron restart
 service ssh restart
+service dropbear restart
 rm -rf ~/.bash_history && history -c
 echo "unset HISTFILE" >> /etc/profile
 
@@ -163,6 +164,7 @@ echo "-------"  | tee -a log-install.txt
 echo "OpenSSH  : 22, 444"  | tee -a log-install.txt
 echo "SSL      : 443"  | tee -a log-install.txt
 echo "OpenVPN  : TCP 1194 (client config : http://$MYIP/client.ovpn)"  | tee -a log-install.txt
+echo "badvpn   : badvpn-udpgw port 7300"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Script"  | tee -a log-install.txt
 echo "------"  | tee -a log-install.txt
