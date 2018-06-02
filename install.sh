@@ -64,7 +64,7 @@ service openvpn restart
 cd /etc/openvpn/
 wget -O /etc/openvpn/client.ovpn "https://raw.githubusercontent.com/irtec/debian7/master/client-1194.conf"
 sed -i $MYIP2 /etc/openvpn/client.ovpn;
-cp client.ovpn /home/admin/web/induk/public_html
+cp client.ovpn /home/admin/web/host/public_html
 
 # install badvpn
 cd
