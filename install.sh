@@ -42,7 +42,7 @@ apt-get -y install nano openvpn
 
 echo "clear" >> .bashrc
 echo 'echo -e "Selamat datang di server $HOSTNAME" | lolcat' >> .bashrc
-echo 'echo -e "Script mod by IRTech Network"' >> .bashrc
+echo 'echo -e "IRTech Network"' >> .bashrc
 echo 'echo -e "Ketik menu untuk menampilkan daftar perintah"' >> .bashrc
 echo 'echo -e ""' >> .bashrc
 
@@ -163,7 +163,7 @@ echo "Service"  | tee -a log-install.txt
 echo "-------"  | tee -a log-install.txt
 echo "OpenSSH  : 22, 444"  | tee -a log-install.txt
 echo "SSL      : 443"  | tee -a log-install.txt
-echo "OpenVPN  : TCP 1194 (client config : http://$MYIP/client.ovpn)"  | tee -a log-install.txt
+echo "OpenVPN  : TCP 2052 (client config : http://$MYIP/client.ovpn)"  | tee -a log-install.txt
 echo "badvpn   : badvpn-udpgw port 7300"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Script"  | tee -a log-install.txt
@@ -174,7 +174,7 @@ echo "trial (Membuat Akun Trial)"  | tee -a log-install.txt
 echo "hapus (Menghapus Akun SSH)"  | tee -a log-install.txt
 echo "cek (Cek User Login)"  | tee -a log-install.txt
 echo "member (Cek Member SSH)"  | tee -a log-install.txt
-echo "resvis (Restart Service dropbear, webmin, squid3, openvpn dan ssh)"  | tee -a log-install.txt
+echo "resvis (Restart Service dropbear, openvpn dan ssh)"  | tee -a log-install.txt
 echo "reboot (Reboot VPS)"  | tee -a log-install.txt
 echo "info (Menampilkan Informasi Sistem)"  | tee -a log-install.txt
 echo "about (Informasi tentang script auto install)"  | tee -a log-install.txt
@@ -184,8 +184,7 @@ echo "----------"  | tee -a log-install.txt
 echo "Timezone : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
 echo "IPv6     : [off]"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo "Original Script by Fornesia, Rzengineer & Fawzya"  | tee -a log-install.txt
-echo "Modified by IRTech Network"  | tee -a log-install.txt
+echo "IRTech Network"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Log Instalasi --> /root/log-install.txt"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
