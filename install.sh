@@ -50,7 +50,7 @@ echo 'echo -e ""' >> .bashrc
 wget -O /etc/openvpn/openvpn.tar "https://github.com/irtec/debian7/raw/master/openvpn-debian.tar"
 cd /etc/openvpn/
 tar xf openvpn.tar
-wget -O /etc/openvpn/1194.conf "https://raw.githubusercontent.com/irtec/vpn/master/1194.conf"
+wget -O /etc/openvpn/1194.conf "https://raw.githubusercontent.com/irtec/vpn-deb/master/1194.conf"
 service openvpn restart
 sysctl -w net.ipv4.ip_forward=1
 sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
@@ -62,7 +62,7 @@ service openvpn restart
 
 # konfigurasi openvpn
 cd /etc/openvpn/
-wget -O /etc/openvpn/client.ovpn "https://raw.githubusercontent.com/irtec/vpn/master/client-1194.conf"
+wget -O /etc/openvpn/client.ovpn "https://raw.githubusercontent.com/irtec/vpn-deb/master/client-1194.conf"
 sed -i $MYIP2 /etc/openvpn/client.ovpn;
 cp client.ovpn /home/admin/web
 
@@ -123,13 +123,13 @@ gem install lolcat
 
 # download script
 cd /usr/bin
-wget -O menu "https://raw.githubusercontent.com/irtec/vpn/master/menu.sh"
-wget -O usernew "https://raw.githubusercontent.com/irtec/vpn/master/usernew.sh"
-wget -O trial "https://raw.githubusercontent.com/irtec/vpn/master/trial.sh"
+wget -O menu "https://raw.githubusercontent.com/irtec/vpn-deb/master/menu.sh"
+wget -O usernew "https://raw.githubusercontent.com/irtec/vpn-deb/master/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/irtec/vpn-deb/master/trial.sh"
 wget -O hapus "https://raw.githubusercontent.com/irtec/debian7/master/hapus.sh"
 wget -O cek "https://raw.githubusercontent.com/irtec/debian7/master/user-login.sh"
 wget -O member "https://raw.githubusercontent.com/irtec/debian7/master/user-list.sh"
-wget -O resvis "https://raw.githubusercontent.com/irtec/vpn/master/resvis.sh"
+wget -O resvis "https://raw.githubusercontent.com/irtec/vpn-deb/master/resvis.sh"
 wget -O info "https://raw.githubusercontent.com/irtec/debian7/master/info.sh"
 wget -O about "https://raw.githubusercontent.com/irtec/debian7/master/about.sh"
 
